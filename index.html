@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento de Estudos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <h1>Planejamento de Estudos</h1>
+            <button class="btnTarefa" type="button" onclick="abrirModal()">Adicionar Tarefa</button>
+        </header>
+    </div>
+
+    <div class="addTarefa" id="modal" style="display: none;">
+        <div class="box">
+            <form id="addTarefa">
+                <div id="head">
+                    <span id="adicionarTarefa" class="title" required>Adicionar Tarefa</span>
+                    <span id="editarTarefa" class="title" required>Editar Tarefa</span>
+                    <button type="button" id="fechar" onclick="fecharModal()">X</button>
+                </div>
+                <input type="hidden" id="idInput">
+                <label for="">Título</label>
+                <input type="text" id="titulo" required>
+                <label for="">Descrição</label>
+                <textarea id="descricao"></textarea>
+                <label>Prioridade</label>
+                <select id="prioridade">
+                    <option value="Alta">Alta</option>
+                    <option value="Média">Média</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
+                <label>Andamento</label>
+                <select id="andamento">
+                    <option value="coluna1">Para Estudar</option>
+                    <option value="coluna2">Em progresso</option>
+                    <option value="coluna3">Concluído</option>
+                </select>
+                <label>Vencimento</label>
+                <input type="date" id="vencimento">
+                <label for="">Responsável</label>
+                <input type="text" id="responsavel">
+                <button id="btnAdicionar" type="button" onclick="criarTarefa()">Adicionar</button>
+                <button id="btnEditar" type="button" onclick="atualizarTarefa()">Concluir</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="kanban">
+        <div class="coluna">
+            <div class="titulo">Conteúdo para estudar</div>
+            <div class="itens" id="coluna1" data-column="coluna1" ondrop="drop_handler(event)"
+                ondragover="dragover_handler(event)">
+            </div>
+        </div>
+        <div class="coluna">
+            <div class="titulo">Em progresso</div>
+            <div class="itens" id="coluna2" data-column="coluna2" ondrop="drop_handler(event)"
+                ondragover="dragover_handler(event)">
+            </div>
+        </div>
+        <div class="coluna">
+            <div class="titulo">Concluído</div>
+            <div class="itens" id="coluna3" data-column="coluna3" ondrop="drop_handler(event)"
+                ondragover="dragover_handler(event)">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

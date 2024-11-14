@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #aaa;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal .box {
+    background-color: #fff;
+    width: 500px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+#modal .box #addTarefa #head {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+#modal .box #addTarefa #head #fechar {
+    display: flex;
+    padding: 5px;
+    background-color: red;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-style: bold;
+
+}
+
+#modal .box #addTarefa #head .title {
+    font-size: 30px;
+    color: #000
+}
+
+#modal .box #addTarefa {
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.box {
+    background-color: #fff;
+    width: 500px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+label {
+    padding-left: 10px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.kanban {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    gap: 30px;
+    display: flex;
+    align-items: stretch;
+}
+
+.coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 13px;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+.itens#coluna3 * {
+    background-color: rgb(255, 222, 137)
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.itens {
+    flex: 1;
+    min-height: 150px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}
+
+.btnTarefa {
+    margin: 20px;
+    font-size: 18px;
+    background-color: #28a745;
+}
+
+.addTarefa {
+    margin-bottom: 20px;
+}
+
+.addTarefa input,
+.addTarefa textarea,
+.addTarefa select {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 7px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    margin-left: auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    display: block;
+    margin-left: auto;
+}
+
+.tarefa {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e2eafc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tarefa.proxima-vencimento {
+    background-color: #ffcccb;
+    border: 1px solid #ff0000;
+}
+
+.tarefa.venceu {
+    background-color: #ff0400a4;
+    border: 1px solid #000000;
+}
